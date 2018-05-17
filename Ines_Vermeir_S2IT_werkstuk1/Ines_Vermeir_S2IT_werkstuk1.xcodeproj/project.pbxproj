@@ -15,6 +15,9 @@
 		C6C5AF7C20AD7E7B00FF72F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C5AF7A20AD7E7B00FF72F6 /* LaunchScreen.storyboard */; };
 		C6C5AF8720AD7E7B00FF72F6 /* Ines_Vermeir_S2IT_werkstuk1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5AF8620AD7E7B00FF72F6 /* Ines_Vermeir_S2IT_werkstuk1Tests.swift */; };
 		C6C5AF9220AD7E7B00FF72F6 /* Ines_Vermeir_S2IT_werkstuk1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5AF9120AD7E7B00FF72F6 /* Ines_Vermeir_S2IT_werkstuk1UITests.swift */; };
+		C6C5AFA020AD864B00FF72F6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5AF9F20AD864B00FF72F6 /* TableViewController.swift */; };
+		C6C5AFA220AD878100FF72F6 /* Persoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5AFA120AD878100FF72F6 /* Persoon.swift */; };
+		C6C5AFA420AD884000FF72F6 /* Adres.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5AFA320AD884000FF72F6 /* Adres.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		C6C5AF8D20AD7E7B00FF72F6 /* Ines_Vermeir_S2IT_werkstuk1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ines_Vermeir_S2IT_werkstuk1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5AF9120AD7E7B00FF72F6 /* Ines_Vermeir_S2IT_werkstuk1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ines_Vermeir_S2IT_werkstuk1UITests.swift; sourceTree = "<group>"; };
 		C6C5AF9320AD7E7B00FF72F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6C5AF9F20AD864B00FF72F6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C6C5AFA120AD878100FF72F6 /* Persoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persoon.swift; sourceTree = "<group>"; };
+		C6C5AFA320AD884000FF72F6 /* Adres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adres.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				C6C5AF6E20AD7E7B00FF72F6 /* AppDelegate.swift */,
 				C6C5AF7020AD7E7B00FF72F6 /* ViewController.swift */,
 				C6C5AF7220AD7E7B00FF72F6 /* Main.storyboard */,
+				C6C5AF9F20AD864B00FF72F6 /* TableViewController.swift */,
+				C6C5AFA120AD878100FF72F6 /* Persoon.swift */,
+				C6C5AFA320AD884000FF72F6 /* Adres.swift */,
 				C6C5AF7820AD7E7B00FF72F6 /* Assets.xcassets */,
 				C6C5AF7A20AD7E7B00FF72F6 /* LaunchScreen.storyboard */,
 				C6C5AF7D20AD7E7B00FF72F6 /* Info.plist */,
@@ -264,7 +273,10 @@
 			files = (
 				C6C5AF7720AD7E7B00FF72F6 /* Ines_Vermeir_S2IT_werkstuk1.xcdatamodeld in Sources */,
 				C6C5AF7120AD7E7B00FF72F6 /* ViewController.swift in Sources */,
+				C6C5AFA220AD878100FF72F6 /* Persoon.swift in Sources */,
+				C6C5AFA420AD884000FF72F6 /* Adres.swift in Sources */,
 				C6C5AF6F20AD7E7B00FF72F6 /* AppDelegate.swift in Sources */,
+				C6C5AFA020AD864B00FF72F6 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
