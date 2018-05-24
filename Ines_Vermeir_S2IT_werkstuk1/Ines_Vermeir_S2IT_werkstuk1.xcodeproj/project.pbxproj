@@ -18,6 +18,7 @@
 		C6C5AFA020AD864B00FF72F6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5AF9F20AD864B00FF72F6 /* TableViewController.swift */; };
 		C6C5AFA220AD878100FF72F6 /* Persoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5AFA120AD878100FF72F6 /* Persoon.swift */; };
 		C6C5AFA420AD884000FF72F6 /* Adres.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5AFA320AD884000FF72F6 /* Adres.swift */; };
+		C6E71DEA20B6B55100E3FB14 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E71DE920B6B55100E3FB14 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		C6C5AF9F20AD864B00FF72F6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		C6C5AFA120AD878100FF72F6 /* Persoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persoon.swift; sourceTree = "<group>"; };
 		C6C5AFA320AD884000FF72F6 /* Adres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adres.swift; sourceTree = "<group>"; };
+		C6E71DE920B6B55100E3FB14 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E71DEA20B6B55100E3FB14 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +92,7 @@
 				C6C5AF8520AD7E7B00FF72F6 /* Ines_Vermeir_S2IT_werkstuk1Tests */,
 				C6C5AF9020AD7E7B00FF72F6 /* Ines_Vermeir_S2IT_werkstuk1UITests */,
 				C6C5AF6C20AD7E7B00FF72F6 /* Products */,
+				C6E71DE820B6B55100E3FB14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +139,14 @@
 				C6C5AF9320AD7E7B00FF72F6 /* Info.plist */,
 			);
 			path = Ines_Vermeir_S2IT_werkstuk1UITests;
+			sourceTree = "<group>";
+		};
+		C6E71DE820B6B55100E3FB14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6E71DE920B6B55100E3FB14 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +218,11 @@
 					C6C5AF6A20AD7E7B00FF72F6 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					C6C5AF8120AD7E7B00FF72F6 = {
 						CreatedOnToolsVersion = 9.2;

@@ -10,7 +10,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    var personen : Array<Persoon>?
+    var personen = [Persoon]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +21,9 @@ class TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        let adres1 = Adres(straat: "Nijverheidskaai", huisnummer: "170", postcode: 1070, gemeente: "Anderlecht")
-        let persoon1 = Persoon(naam: "Willems", voornaam: "Cedric", foto: <#T##UIImage#>, adres: adres1, gpsCo: "String", telefoon: "0498 76 54 32")
-        
-        personen?.append(persoon1)
+        let adres1 = Adres(straat: "Nijverheidskaai", huisnummer: "170", postcode: "1070", gemeente: "Anderlecht")
+        let persoon1 = Persoon(naam: "Willems", voornaam: "Cedric", foto: #imageLiteral(resourceName: "cedric"), adres: adres1, gpsCoLat: 50.848306, gpsCoLong: 4.349608, telefoon: "0498 76 54 32")
+        self.personen = [persoon1]
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,23 +35,25 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return (personen.count)
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
 
-        // Configure the cell...
-
+        cell.textLabel?.text = self.personen[indexPath.row].voornaam
+        cell.detailTextLabel?.text = self.personen[indexPath.row].naam
+        cell.imageView?.image = self.personen[indexPath.row].foto
+        
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
@@ -89,14 +90,20 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let nextVC = segue.destination as? ViewController
+        {
+            let indexPath = self.tableView.indexPathForSelectedRow!
+            nextVC.persoon = self.personen[indexPath.row]
+            
+        }
     }
-    */
+    
 
 }
