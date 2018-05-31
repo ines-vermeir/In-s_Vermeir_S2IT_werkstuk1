@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AQA-zI-TFB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Qz-as-5ij">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -152,10 +152,10 @@
             <point key="canvasLocation" x="-591" y="3"/>
         </scene>
         <!--Personen-->
-        <scene sceneID="6dr-ai-1Qa">
+        <scene sceneID="IuD-TR-j70">
             <objects>
-                <tableViewController id="AQA-zI-TFB" customClass="TableViewController" customModule="Ines_Vermeir_S2IT_werkstuk1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cmp-Zr-80k">
+                <tableViewController id="keS-Bm-CTy" customClass="TableViewController" customModule="Ines_Vermeir_S2IT_werkstuk1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9kj-9A-2or">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -184,20 +184,44 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="UFV-UB-hcO" kind="show" id="JiT-LX-2fL"/>
+                                    <segue destination="UFV-UB-hcO" kind="show" id="LqX-VB-sfy"/>
                                 </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Cun-mh-EGu">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cun-mh-EGu" id="zGx-mY-aBA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="AQA-zI-TFB" id="2ga-bH-jpe"/>
-                            <outlet property="delegate" destination="AQA-zI-TFB" id="hk1-KV-ado"/>
+                            <outlet property="dataSource" destination="keS-Bm-CTy" id="VXC-PK-mN0"/>
+                            <outlet property="delegate" destination="keS-Bm-CTy" id="1jt-uJ-8zl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Personen" id="iUT-bT-78I"/>
+                    <navigationItem key="navigationItem" title="Personen" id="egp-rQ-1fG"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0ra-1U-p6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bhF-75-v7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1162" y="53"/>
+            <point key="canvasLocation" x="1517" y="480"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ScZ-AP-oNk">
+            <objects>
+                <navigationController id="5Qz-as-5ij" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J9C-y8-aeB">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="keS-Bm-CTy" kind="relationship" relationship="rootViewController" id="XgL-Mp-bep"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkd-eO-gHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566" y="480"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iGm-mG-IEX">
@@ -269,34 +293,20 @@
                         <viewLayoutGuide key="safeArea" id="W8R-Sh-JIE"/>
                     </view>
                     <connections>
-                        <outlet property="foto" destination="JDP-IW-Jbb" id="oam-rc-mdi"/>
-                        <outlet property="gemeente" destination="Z42-GI-7KZ" id="xrl-Fe-qdQ"/>
-                        <outlet property="mapView" destination="DUN-iN-BmR" id="jLr-OM-kze"/>
-                        <outlet property="mapview" destination="DUN-iN-BmR" id="ul6-bg-8vd"/>
-                        <outlet property="naam" destination="ASC-Oq-M5F" id="d2t-Du-4VI"/>
-                        <outlet property="nummer" destination="P2r-xm-jNm" id="wWJ-vf-U1t"/>
-                        <outlet property="postcode" destination="dI2-s7-dWe" id="DuI-8Z-6QD"/>
-                        <outlet property="straat" destination="BOt-k7-jRN" id="7xY-TZ-cB5"/>
-                        <outlet property="telefoon" destination="eyk-sA-gLv" id="Ym9-7u-YZN"/>
-                        <outlet property="voornaam" destination="lJ7-kN-cth" id="j9j-FY-mYI"/>
+                        <outlet property="foto" destination="JDP-IW-Jbb" id="LE1-r4-EK2"/>
+                        <outlet property="gemeente" destination="Z42-GI-7KZ" id="jIJ-6Z-zxT"/>
+                        <outlet property="mapview" destination="DUN-iN-BmR" id="8fd-Mf-dSN"/>
+                        <outlet property="naam" destination="ASC-Oq-M5F" id="ueL-JB-hHq"/>
+                        <outlet property="nummer" destination="P2r-xm-jNm" id="FnN-U9-gt9"/>
+                        <outlet property="postcode" destination="dI2-s7-dWe" id="7ao-g5-HPK"/>
+                        <outlet property="straat" destination="BOt-k7-jRN" id="hBm-HS-zPm"/>
+                        <outlet property="telefoon" destination="eyk-sA-gLv" id="DvK-YF-1O2"/>
+                        <outlet property="voornaam" destination="lJ7-kN-cth" id="Fpr-eD-X9R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cls-oU-zrc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1660" y="53"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="jOP-J7-cI0">
-            <objects>
-                <navigationController id="zdq-h8-7So" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YPC-Hk-zX3">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ukj-mz-HTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="241" y="53"/>
+            <point key="canvasLocation" x="2510" y="480"/>
         </scene>
     </scenes>
     <resources>

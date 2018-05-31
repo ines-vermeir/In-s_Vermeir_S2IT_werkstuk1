@@ -41,7 +41,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.telefoon.text = persoon?.telefoon
         self.voornaam.text = persoon?.voornaam
         
-        self.mapview.addAnnotation(persoon?.coordinate as! MKAnnotation)
+       
+        self.mapview.addAnnotation(persoon!)
     }
 
    
@@ -51,11 +52,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         // Dispose of any resources that can be recreated.
     }
    
-  /* private func mapView(_ mapView: MKMapView, didUpdate userLocation: MKAnnotationView) {
-        let center = CLLocationCoordinate2D(latitude: (persoon?.gpsCoLat)!, longitude: (persoon?.gpsCoLong)!)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-         mapView.setRegion(region, animated: true)
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        let center = persoon?.coordinate
+        let region = MKCoordinateRegion(center: center!, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        mapView.setRegion(region, animated: true)
     }
-*/
+
 }
 
