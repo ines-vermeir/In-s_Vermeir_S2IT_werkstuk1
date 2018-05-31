@@ -7,24 +7,24 @@
 //
 
 import UIKit
+import Foundation
+import MapKit
 
-class Persoon: NSObject {
+class Persoon: NSObject, MKAnnotation {
 
     var naam : String
     var voornaam : String
     var foto : UIImage
     var adres : Adres
-    var gpsCoLat : Double
-    var gpsCoLong : Double
+    var coordinate: CLLocationCoordinate2D
     var telefoon : String
     
-    init(naam : String, voornaam : String, foto : UIImage, adres : Adres, gpsCoLat : Double, gpsCoLong : Double, telefoon : String){
+    init(naam : String, voornaam : String, foto : UIImage, adres : Adres, coordinate: CLLocationCoordinate2D, telefoon : String){
         self.naam = naam
         self.voornaam = voornaam
         self.foto = foto
         self.adres = adres
-        self.gpsCoLat = gpsCoLat
-        self.gpsCoLong = gpsCoLong
+        self.coordinate = coordinate
         self.telefoon = telefoon
     }
 }

@@ -10,8 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, MKAnnotation, NSObject {
-
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     var persoon : Persoon?
     
     @IBOutlet weak var naam: UILabel!
@@ -22,13 +21,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var straat: UILabel!
     @IBOutlet weak var telefoon: UILabel!
     @IBOutlet weak var voornaam: UILabel!
-    var locationManager = CLLocationManager()
     
     @IBOutlet weak var mapview: MKMapView!
+    
+    var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        
         self.naam.text = persoon?.naam
         self.foto.image = persoon?.foto
         self.gemeente.text = persoon?.adres.gemeente
@@ -38,21 +41,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.telefoon.text = persoon?.telefoon
         self.voornaam.text = persoon?.voornaam
         
-        let annotation = MKAnnotation.self
-        let annotationview = MKAnnotationView(annotation: annotation, reuseIdentifier: "string")
+        self.mapview.addAnnotation(persoon?.coordinate as! MKAnnotation)
     }
 
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   /*
-   private func mapView(_ mapView: MKMapView, didUpdate userLocation: MKAnnotationView) {
+   
+  /* private func mapView(_ mapView: MKMapView, didUpdate userLocation: MKAnnotationView) {
         let center = CLLocationCoordinate2D(latitude: (persoon?.gpsCoLat)!, longitude: (persoon?.gpsCoLong)!)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
          mapView.setRegion(region, animated: true)

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class TableViewController: UITableViewController {
 
@@ -22,7 +23,8 @@ class TableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         let adres1 = Adres(straat: "Nijverheidskaai", huisnummer: "170", postcode: "1070", gemeente: "Anderlecht")
-        let persoon1 = Persoon(naam: "Willems", voornaam: "Cedric", foto: #imageLiteral(resourceName: "cedric"), adres: adres1, gpsCoLat: 50.848306, gpsCoLong: 4.349608, telefoon: "0498 76 54 32")
+        let location = CLLocationCoordinate2D(latitude: 50.848293, longitude: 4.349597)
+        let persoon1 = Persoon(naam: "Willems", voornaam: "Cedric", foto: #imageLiteral(resourceName: "cedric"), adres: adres1, coordinate: location, telefoon: "0498 76 54 32")
         self.personen = [persoon1]
     }
 
