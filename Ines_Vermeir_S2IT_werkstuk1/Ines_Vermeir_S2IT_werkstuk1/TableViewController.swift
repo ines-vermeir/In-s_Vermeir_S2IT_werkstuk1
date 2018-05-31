@@ -13,6 +13,13 @@ class TableViewController: UITableViewController {
 
     var personen = [Persoon]()
     
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        // Initialize Tab Bar Item
+        tabBarItem = UITabBarItem(title: "Personen", image: UIImage(), tag: 0)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

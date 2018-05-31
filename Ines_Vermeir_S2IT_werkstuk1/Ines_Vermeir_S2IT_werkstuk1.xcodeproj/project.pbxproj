@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6A1137820C0763A00D2F7EE /* ViewControllerMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1137720C0763A00D2F7EE /* ViewControllerMaps.swift */; };
 		C6C5AF6F20AD7E7B00FF72F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5AF6E20AD7E7B00FF72F6 /* AppDelegate.swift */; };
 		C6C5AF7120AD7E7B00FF72F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5AF7020AD7E7B00FF72F6 /* ViewController.swift */; };
 		C6C5AF7420AD7E7B00FF72F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C5AF7220AD7E7B00FF72F6 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C6A1137720C0763A00D2F7EE /* ViewControllerMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMaps.swift; sourceTree = "<group>"; };
 		C6C5AF6B20AD7E7B00FF72F6 /* Ines_Vermeir_S2IT_werkstuk1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ines_Vermeir_S2IT_werkstuk1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C5AF6E20AD7E7B00FF72F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6C5AF7020AD7E7B00FF72F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				C6C5AF6E20AD7E7B00FF72F6 /* AppDelegate.swift */,
 				C6C5AF7020AD7E7B00FF72F6 /* ViewController.swift */,
 				C6C5AF7220AD7E7B00FF72F6 /* Main.storyboard */,
+				C6A1137720C0763A00D2F7EE /* ViewControllerMaps.swift */,
 				C6EA932F20BFFB7700C16160 /* ViewControllerImg.swift */,
 				C6C5AF9F20AD864B00FF72F6 /* TableViewController.swift */,
 				C6C5AFA120AD878100FF72F6 /* Persoon.swift */,
@@ -294,6 +297,7 @@
 				C6C5AF7720AD7E7B00FF72F6 /* Ines_Vermeir_S2IT_werkstuk1.xcdatamodeld in Sources */,
 				C6C5AF7120AD7E7B00FF72F6 /* ViewController.swift in Sources */,
 				C6C5AFA220AD878100FF72F6 /* Persoon.swift in Sources */,
+				C6A1137820C0763A00D2F7EE /* ViewControllerMaps.swift in Sources */,
 				C6C5AFA420AD884000FF72F6 /* Adres.swift in Sources */,
 				C6C5AF6F20AD7E7B00FF72F6 /* AppDelegate.swift in Sources */,
 				C6C5AFA020AD864B00FF72F6 /* TableViewController.swift in Sources */,
