@@ -231,9 +231,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="myImg" translatesAutoresizingMaskIntoConstraints="NO" id="JDP-IW-Jbb">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="myImg" translatesAutoresizingMaskIntoConstraints="NO" id="JDP-IW-Jbb">
                                 <rect key="frame" x="0.0" y="64" width="111" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="f0n-Tb-WGt" appends="YES" id="58h-SP-G0y"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Naam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASC-Oq-M5F">
                                 <rect key="frame" x="119" y="75" width="189" height="21"/>
@@ -305,8 +309,38 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cls-oU-zrc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="f0n-Tb-WGt">
+                    <connections>
+                        <segue destination="Vx2-4K-fGe" kind="show" id="gJ1-zb-EDF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2510" y="480"/>
+        </scene>
+        <!--View Controller Img-->
+        <scene sceneID="tgf-f1-aGa">
+            <objects>
+                <viewController id="Vx2-4K-fGe" customClass="ViewControllerImg" customModule="Ines_Vermeir_S2IT_werkstuk1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uCy-Hk-9UC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="myImg" translatesAutoresizingMaskIntoConstraints="NO" id="Wfg-Bk-Yik">
+                                <rect key="frame" x="16" y="64" width="343" height="583"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="AjO-78-4NO"/>
+                    </view>
+                    <connections>
+                        <outlet property="fotoView" destination="Wfg-Bk-Yik" id="QdU-bw-77l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADq-KJ-MM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3221.5999999999999" y="479.91004497751129"/>
         </scene>
     </scenes>
     <resources>

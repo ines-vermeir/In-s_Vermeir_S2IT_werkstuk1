@@ -57,6 +57,16 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let region = MKCoordinateRegion(center: center!, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         mapView.setRegion(region, animated: true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if let nextVC = segue.destination as? ViewControllerImg
+        {
+            nextVC.foto = self.persoon?.foto
+            
+        }
+    }
 
 }
 

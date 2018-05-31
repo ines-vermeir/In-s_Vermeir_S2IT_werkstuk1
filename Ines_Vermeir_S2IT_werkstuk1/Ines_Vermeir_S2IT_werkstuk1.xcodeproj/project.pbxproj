@@ -19,6 +19,7 @@
 		C6C5AFA220AD878100FF72F6 /* Persoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5AFA120AD878100FF72F6 /* Persoon.swift */; };
 		C6C5AFA420AD884000FF72F6 /* Adres.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5AFA320AD884000FF72F6 /* Adres.swift */; };
 		C6E71DEA20B6B55100E3FB14 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E71DE920B6B55100E3FB14 /* MapKit.framework */; };
+		C6EA933020BFFB7700C16160 /* ViewControllerImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EA932F20BFFB7700C16160 /* ViewControllerImg.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		C6C5AFA120AD878100FF72F6 /* Persoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persoon.swift; sourceTree = "<group>"; };
 		C6C5AFA320AD884000FF72F6 /* Adres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adres.swift; sourceTree = "<group>"; };
 		C6E71DE920B6B55100E3FB14 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C6EA932F20BFFB7700C16160 /* ViewControllerImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerImg.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				C6C5AF6E20AD7E7B00FF72F6 /* AppDelegate.swift */,
 				C6C5AF7020AD7E7B00FF72F6 /* ViewController.swift */,
 				C6C5AF7220AD7E7B00FF72F6 /* Main.storyboard */,
+				C6EA932F20BFFB7700C16160 /* ViewControllerImg.swift */,
 				C6C5AF9F20AD864B00FF72F6 /* TableViewController.swift */,
 				C6C5AFA120AD878100FF72F6 /* Persoon.swift */,
 				C6C5AFA320AD884000FF72F6 /* Adres.swift */,
@@ -294,6 +297,7 @@
 				C6C5AFA420AD884000FF72F6 /* Adres.swift in Sources */,
 				C6C5AF6F20AD7E7B00FF72F6 /* AppDelegate.swift in Sources */,
 				C6C5AFA020AD864B00FF72F6 /* TableViewController.swift in Sources */,
+				C6EA933020BFFB7700C16160 /* ViewControllerImg.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
