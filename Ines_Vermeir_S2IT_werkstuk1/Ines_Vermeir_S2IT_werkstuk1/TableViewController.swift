@@ -46,6 +46,10 @@ class TableViewController: UITableViewController {
         let persoon4 = Persoon(naam: "Blancquaert", voornaam: "Robrecht", foto: #imageLiteral(resourceName: "Robrecht"), adres: adres4, coordinate: location4, telefoon: "0450 36 52 44")
         
         self.personen = [persoon1, persoon2, persoon3, persoon4]
+        
+        let secondTab = self.tabBarController?.viewControllers![1] as! ViewControllerMaps
+        secondTab.personen = self.personen
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -125,6 +129,8 @@ class TableViewController: UITableViewController {
             nextVC.persoon = self.personen[indexPath.row]
             
         }
+        
+       
     }
     
 

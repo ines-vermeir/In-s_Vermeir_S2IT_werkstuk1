@@ -11,8 +11,16 @@ import MapKit
 
 class ViewControllerMaps: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate{
     
+    @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
+    var personen = [Persoon]()
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        // Initialize Tab Bar Item
+        tabBarItem = UITabBarItem(title: "Map", image: UIImage(), tag: 1)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +30,9 @@ class ViewControllerMaps: UIViewController,MKMapViewDelegate, CLLocationManagerD
         locationManager.startUpdatingLocation()
         
         // Do any additional setup after loading the view.
+        for persoon in personen {
+            self.mapView.addAnnotation(persoon)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +40,12 @@ class ViewControllerMaps: UIViewController,MKMapViewDelegate, CLLocationManagerD
         // Dispose of any resources that can be recreated.
     }
     
-
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        let center = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.001 , longitudeDelta: 0.001))
+        mapView.setRegion(region, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
