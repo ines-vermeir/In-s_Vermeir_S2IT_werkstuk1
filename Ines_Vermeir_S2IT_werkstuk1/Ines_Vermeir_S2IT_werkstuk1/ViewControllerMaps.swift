@@ -32,6 +32,7 @@ class ViewControllerMaps: UIViewController,MKMapViewDelegate, CLLocationManagerD
         // Do any additional setup after loading the view.
         for persoon in personen {
             self.mapView.addAnnotation(persoon)
+            print(persoon)
         }
     }
 
@@ -42,7 +43,8 @@ class ViewControllerMaps: UIViewController,MKMapViewDelegate, CLLocationManagerD
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         let center = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.001 , longitudeDelta: 0.001))
+        let span = MKCoordinateSpan(latitudeDelta:  0.1, longitudeDelta:  0.1)
+        let region = MKCoordinateRegion(center: center, span: span)
         mapView.setRegion(region, animated: true)
     }
     

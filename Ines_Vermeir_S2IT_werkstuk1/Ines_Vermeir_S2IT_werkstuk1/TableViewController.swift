@@ -32,17 +32,17 @@ class TableViewController: UITableViewController {
         let adres1 = Adres(straat: "Beursplein", huisnummer: "", postcode: "1000", gemeente: "Brussel")
         let location1 = CLLocationCoordinate2D(latitude: 50.848293, longitude: 4.349597)
         let persoon1 = Persoon(naam: "Willems", voornaam: "Cedric", foto: #imageLiteral(resourceName: "cedric"), adres: adres1, coordinate: location1, telefoon: "0498 76 54 32")
-        
+       
         let adres2 = Adres(straat: "Viooltjeslaan", huisnummer: "8", postcode: "17700", gemeente: "Liedekerke")
         let location2 = CLLocationCoordinate2D(latitude: 50.857902, longitude: 4.112711)
         let persoon2 = Persoon(naam: "Rooselears", voornaam: "Stijn", foto: #imageLiteral(resourceName: "Stijn"), adres: adres2, coordinate: location2, telefoon: "0423 45 87 10")
         
-        let adres3 = Adres(straat: "Laarbeeklaan", huisnummer: "107", postcode: "1090", gemeente: "Jette")
-        let location3 = CLLocationCoordinate2D(latitude: 50.884226, longitude: 4.306844)
+        let adres3 = Adres(straat: "Sint-Pietersnieuwstraat", huisnummer: "23", postcode: "9000", gemeente: "Gent")
+        let location3 = CLLocationCoordinate2D(latitude: 51.047761, longitude: 3.727263)
         let persoon3 = Persoon(naam: "Kruf", voornaam: "Femke", foto: #imageLiteral(resourceName: "femke"), adres: adres3, coordinate: location3, telefoon: "0410 25 74 20")
         
-        let adres4 = Adres(straat: "Nijverheidskaai", huisnummer: "170", postcode: "1070", gemeente: "Anderlecht")
-        let location4 = CLLocationCoordinate2D(latitude: 50.848293, longitude: 4.349597)
+        let adres4 = Adres(straat: "Groenplaats", huisnummer: "1", postcode: "2000", gemeente: "Antwerpen")
+        let location4 = CLLocationCoordinate2D(latitude: 51.218580, longitude: 4.401450)
         let persoon4 = Persoon(naam: "Blancquaert", voornaam: "Robrecht", foto: #imageLiteral(resourceName: "Robrecht"), adres: adres4, coordinate: location4, telefoon: "0450 36 52 44")
         
         self.personen = [persoon1, persoon2, persoon3, persoon4]
