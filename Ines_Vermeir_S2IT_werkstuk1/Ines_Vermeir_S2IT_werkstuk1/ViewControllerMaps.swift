@@ -26,8 +26,8 @@ class ViewControllerMaps: UIViewController,MKMapViewDelegate, CLLocationManagerD
 
         
         locationManager.requestAlwaysAuthorization()
-        
         locationManager.startUpdatingLocation()
+        mapView.showsUserLocation = true
         
         // Do any additional setup after loading the view.
         for persoon in personen {
