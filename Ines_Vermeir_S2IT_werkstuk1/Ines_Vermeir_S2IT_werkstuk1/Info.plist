@@ -33,16 +33,10 @@
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>MKDirectionsApplicationSupportedModes</key>
-	<array>
-		<string>MKDirectionsModePedestrian</string>
-	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Locatie wordt gebruikt</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>"Locatie gebruiken"</string>
-	<key>NSLocationUsageDescription</key>
-	<string>"Locatie gebruiken"</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>"Locatie gebruiken"</string>
+	<string>use location</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
